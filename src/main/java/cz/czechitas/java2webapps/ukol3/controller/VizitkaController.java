@@ -36,4 +36,24 @@ public class VizitkaController {
     result.addObject("vizitka", service.getById(id));
     return result;
   }
+
+  @PostMapping("detail/{id}")
+  public String deleteById(@PathVariable int id) {
+    service.deleteById(id);
+    return "redirect:/";
+  }
+
+
+  @GetMapping("/nova")
+  public ModelAndView nova() {
+    return new ModelAndView("nova");
+  }
+
+  @PostMapping("/nova")
+  public String add(Vizitka vizitka) {
+    service.append(vizitka);
+    return "redirect:/";
+  }
+
+
 }
