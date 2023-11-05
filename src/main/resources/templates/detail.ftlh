@@ -28,12 +28,6 @@
                 frameborder="0"></iframe>
     </div>
 
-    <form action="/delete" method="post">
-        <input type="hidden" name="id" value="${idVizitka}">
-        <button type="submit" class="btn btn-primary">Smazat</button>
-    </form>
-
-
     <nav>
         <a href="/">◂ zpět na seznam</a>
         <form class="row g-3" method="post" action="/detail/${id}">
